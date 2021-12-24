@@ -1,0 +1,15 @@
+Dashboard:
+map
+chat
+Infocard
+description
+showchckpoints
+images
+members
+
+
+listing and journey card
+
+create, map, searchlocationinput
+
+Edit,addcheckpoitn,editjourneydetails

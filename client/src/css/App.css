@@ -1,0 +1,33 @@
+/* @import "~antd/dist/antd.css"; */
+
+body {
+  background-color: #fff;
+}
+
+.App {
+  background-color: #fff;
+  color: #333;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 10px;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.journey{
+  text-align: center;
+}
+
+.title {
+	font-weight: bolder;
+	color: #101544;
+	font-size: large;
+}
+
