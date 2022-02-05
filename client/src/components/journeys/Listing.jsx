@@ -31,7 +31,9 @@ const useStyles = makeStyles((theme) => ({
 const JourneyListing = () => {
   const classes = useStyles();
   const [journeys, setJourneys] = useState([]);
+  const [updateStatus, updateData] = useState(false);
   const [filter, setFilter] = useState("all");
+
   const history = useHistory();
 
   useEffect(() => {
@@ -48,24 +50,10 @@ const JourneyListing = () => {
     }
     fetchData();
     console.log(journeys);
-  }, [filter]);
+  }, [filter, updateStatus]);
 
   var removeByAttr = function (journeys, attr, value) {
-    var i = journeys.length;
-    var journeys2 = [];
-    while (i--) {
-      if (
-        journeys[i] &&
-        journeys[i].hasOwnProperty(attr) &&
-        arguments.length > 2 &&
-        journeys[i][attr] === value
-      ) {
-        console.log(journeys[i]);
-        journeys2 = journeys.splice(i, 1);
-      }
-    }
-    console.log("updated journey", journeys2);
-    history.push("/journeys");
+    updateData(true);
   };
 
   const deleteJourney = async (id) => {
